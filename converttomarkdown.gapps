@@ -14,7 +14,7 @@ function onInstall(e) {
 function ConvertToMarkdown() {
   // Convert to markdwon
   var convertedDoc = markdown();
-  var html = HtmlService.createHtmlOutput(convertedDoc.text)
+  var html = HtmlService.createHtmlOutput("<pre>"+convertedDoc.text+"</pre>")
     .setSandboxMode(HtmlService.SandboxMode.IFRAME)
     .setTitle('Markdown')
     .setWidth(300);
